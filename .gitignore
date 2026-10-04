@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+
+# Raw output from runs (worker logs contain local paths); curated results live in results/
+/stress_*.json
+/stress_*.log

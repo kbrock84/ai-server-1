@@ -1,0 +1,594 @@
+{
+  "timestamp": "2026-10-04T14:12:23.382296",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+  "configuration": {
+    "gpus": [
+      0,
+      1,
+      2
+    ],
+    "requested_duration_min": 2.0,
+    "actual_load_time_s": 120.1,
+    "interrupted": false,
+    "gpu_memory_utilization": 0.75,
+    "max_model_len": 4096,
+    "concurrency_per_gpu": 64,
+    "max_tokens_per_request": 512,
+    "prompt_tokens_per_request": null
+  },
+  "summary": {
+    "0": {
+      "status": "completed",
+      "error": null,
+      "model_load_time_s": 29.63,
+      "requests_completed": 352,
+      "input_tokens": 3608,
+      "output_tokens": 188001,
+      "output_tokens_per_second": 955.99,
+      "idle": {
+        "temperature_c": 42.0,
+        "power_draw_w": 7.65,
+        "power_limit_w": 180.0,
+        "gpu_utilization_pct": 0.0,
+        "memory_used_mb": 34.0,
+        "memory_total_mb": 16311.0,
+        "fan_speed_pct": 0.0,
+        "pcie_gen": 1.0,
+        "pcie_width": 8.0,
+        "throttled": false
+      },
+      "temperature_c": {
+        "max": 78.0,
+        "avg": 76.5
+      },
+      "power_draw_w": {
+        "max": 145.1,
+        "avg": 143.7
+      },
+      "gpu_utilization_pct": {
+        "min": 100.0,
+        "avg": 100.0
+      },
+      "memory_used_mb": {
+        "max": 12150.0
+      },
+      "fan_speed_pct": {
+        "max": 59.0
+      },
+      "throttled": false
+    },
+    "1": {
+      "status": "completed",
+      "error": null,
+      "model_load_time_s": 29.39,
+      "requests_completed": 297,
+      "input_tokens": 3045,
+      "output_tokens": 154803,
+      "output_tokens_per_second": 966.76,
+      "idle": {
+        "temperature_c": 37.0,
+        "power_draw_w": 6.2,
+        "power_limit_w": 180.0,
+        "gpu_utilization_pct": 0.0,
+        "memory_used_mb": 2.0,
+        "memory_total_mb": 16311.0,
+        "fan_speed_pct": 0.0,
+        "pcie_gen": 1.0,
+        "pcie_width": 8.0,
+        "throttled": false
+      },
+      "temperature_c": {
+        "max": 68.0,
+        "avg": 67.2
+      },
+      "power_draw_w": {
+        "max": 149.4,
+        "avg": 149.0
+      },
+      "gpu_utilization_pct": {
+        "min": 100.0,
+        "avg": 100.0
+      },
+      "memory_used_mb": {
+        "max": 12142.0
+      },
+      "fan_speed_pct": {
+        "max": 41.0
+      },
+      "throttled": false
+    },
+    "2": {
+      "status": "completed",
+      "error": null,
+      "model_load_time_s": 29.92,
+      "requests_completed": 231,
+      "input_tokens": 2368,
+      "output_tokens": 118273,
+      "output_tokens_per_second": 961.9,
+      "idle": {
+        "temperature_c": 46.0,
+        "power_draw_w": 5.42,
+        "power_limit_w": 180.0,
+        "gpu_utilization_pct": 0.0,
+        "memory_used_mb": 2.0,
+        "memory_total_mb": 16311.0,
+        "fan_speed_pct": 36.0,
+        "pcie_gen": 1.0,
+        "pcie_width": 8.0,
+        "throttled": false
+      },
+      "temperature_c": {
+        "max": 70.0,
+        "avg": 66.8
+      },
+      "power_draw_w": {
+        "max": 148.9,
+        "avg": 146.3
+      },
+      "gpu_utilization_pct": {
+        "min": 100.0,
+        "avg": 100.0
+      },
+      "memory_used_mb": {
+        "max": 12142.0
+      },
+      "fan_speed_pct": {
+        "max": 58.0
+      },
+      "throttled": false
+    }
+  },
+  "samples": [
+    {
+      "elapsed_s": 10.2,
+      "gpus": {
+        "0": {
+          "temperature_c": 74.0,
+          "power_draw_w": 142.05,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 50.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 977.8
+        },
+        "1": {
+          "temperature_c": 66.0,
+          "power_draw_w": 148.11,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 36.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 988.5
+        },
+        "2": {
+          "temperature_c": 61.0,
+          "power_draw_w": 141.63,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12140.0,
+          "fan_speed_pct": 42.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 995.1
+        }
+      }
+    },
+    {
+      "elapsed_s": 20.2,
+      "gpus": {
+        "0": {
+          "temperature_c": 75.0,
+          "power_draw_w": 141.99,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 51.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 937.5
+        },
+        "1": {
+          "temperature_c": 66.0,
+          "power_draw_w": 148.61,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 38.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1016.0
+        },
+        "2": {
+          "temperature_c": 63.0,
+          "power_draw_w": 143.12,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12140.0,
+          "fan_speed_pct": 45.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 985.9
+        }
+      }
+    },
+    {
+      "elapsed_s": 30.5,
+      "gpus": {
+        "0": {
+          "temperature_c": 75.0,
+          "power_draw_w": 142.62,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 52.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 915.2
+        },
+        "1": {
+          "temperature_c": 67.0,
+          "power_draw_w": 148.88,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 38.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1001.0
+        },
+        "2": {
+          "temperature_c": 65.0,
+          "power_draw_w": 144.49,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12140.0,
+          "fan_speed_pct": 48.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1056.5
+        }
+      }
+    },
+    {
+      "elapsed_s": 40.6,
+      "gpus": {
+        "0": {
+          "temperature_c": 76.0,
+          "power_draw_w": 142.87,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 53.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 994.2
+        },
+        "1": {
+          "temperature_c": 67.0,
+          "power_draw_w": 149.03,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 39.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 961.4
+        },
+        "2": {
+          "temperature_c": 66.0,
+          "power_draw_w": 145.21,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 50.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1011.8
+        }
+      }
+    },
+    {
+      "elapsed_s": 50.6,
+      "gpus": {
+        "0": {
+          "temperature_c": 76.0,
+          "power_draw_w": 143.54,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 54.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1002.0
+        },
+        "1": {
+          "temperature_c": 67.0,
+          "power_draw_w": 148.92,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 39.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 976.5
+        },
+        "2": {
+          "temperature_c": 66.0,
+          "power_draw_w": 146.24,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 52.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1003.2
+        }
+      }
+    },
+    {
+      "elapsed_s": 60.9,
+      "gpus": {
+        "0": {
+          "temperature_c": 77.0,
+          "power_draw_w": 143.87,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 55.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 982.4
+        },
+        "1": {
+          "temperature_c": 67.0,
+          "power_draw_w": 149.38,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 40.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1053.8
+        },
+        "2": {
+          "temperature_c": 68.0,
+          "power_draw_w": 146.97,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 54.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 997.4
+        }
+      }
+    },
+    {
+      "elapsed_s": 71.0,
+      "gpus": {
+        "0": {
+          "temperature_c": 77.0,
+          "power_draw_w": 144.15,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 56.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 938.9
+        },
+        "1": {
+          "temperature_c": 68.0,
+          "power_draw_w": 149.37,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 40.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 982.6
+        },
+        "2": {
+          "temperature_c": 68.0,
+          "power_draw_w": 147.5,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 55.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 975.9
+        }
+      }
+    },
+    {
+      "elapsed_s": 81.1,
+      "gpus": {
+        "0": {
+          "temperature_c": 77.0,
+          "power_draw_w": 144.51,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 57.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 962.4
+        },
+        "1": {
+          "temperature_c": 68.0,
+          "power_draw_w": 149.24,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 40.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 992.5
+        },
+        "2": {
+          "temperature_c": 69.0,
+          "power_draw_w": 147.99,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 56.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 992.5
+        }
+      }
+    },
+    {
+      "elapsed_s": 91.3,
+      "gpus": {
+        "0": {
+          "temperature_c": 78.0,
+          "power_draw_w": 144.84,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 58.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1036.4
+        },
+        "1": {
+          "temperature_c": 68.0,
+          "power_draw_w": 149.34,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 40.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 1004.2
+        },
+        "2": {
+          "temperature_c": 69.0,
+          "power_draw_w": 148.36,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 57.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 956.3
+        }
+      }
+    },
+    {
+      "elapsed_s": 101.5,
+      "gpus": {
+        "0": {
+          "temperature_c": 78.0,
+          "power_draw_w": 144.86,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 59.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 988.5
+        },
+        "1": {
+          "temperature_c": 68.0,
+          "power_draw_w": 148.95,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 41.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 972.8
+        },
+        "2": {
+          "temperature_c": 70.0,
+          "power_draw_w": 148.7,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 57.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 943.8
+        }
+      }
+    },
+    {
+      "elapsed_s": 111.6,
+      "gpus": {
+        "0": {
+          "temperature_c": 78.0,
+          "power_draw_w": 145.11,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12150.0,
+          "fan_speed_pct": 59.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 978.2
+        },
+        "1": {
+          "temperature_c": 67.0,
+          "power_draw_w": 149.21,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 41.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 995.5
+        },
+        "2": {
+          "temperature_c": 70.0,
+          "power_draw_w": 148.93,
+          "gpu_utilization_pct": 100.0,
+          "memory_used_mb": 12142.0,
+          "fan_speed_pct": 58.0,
+          "pcie_gen": 4.0,
+          "pcie_width": 8.0,
+          "throttled": false,
+          "requests_running": 64,
+          "output_tokens_per_second": 995.5
+        }
+      }
+    }
+  ]
+}
