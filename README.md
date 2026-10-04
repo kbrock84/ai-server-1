@@ -50,6 +50,8 @@ no worker failures and no thermal or power throttling reported by the driver. Ev
 kept a Gen4 x8 link throughout. GPU 0 ran about 4-5 °C hotter than the other two. Across
 the run the cards completed 3,698 requests (about 11.1 million input tokens).
 
+![Power draw and token output per GPU, 10-minute full-power run](results/full-power_10min_20261004.png)
+
 Raw data: [`results/full-power_10min_20261004.json`](results/full-power_10min_20261004.json)
 
 ### Decode-heavy: 2 minutes, all three cards
@@ -65,6 +67,8 @@ workload and draws less power.
 | 1 | completed | 967 | 149.0 W / 149.4 W | 100% | 67.2 / 68 °C |
 | 2 | completed | 962 | 146.3 W / 148.9 W | 100% | 66.8 / 70 °C |
 
+![Power draw and token output per GPU, 2-minute decode-heavy run](results/decode_2min_20261004.png)
+
 Raw data: [`results/decode_2min_20261004.json`](results/decode_2min_20261004.json)
 
 Notes on reading the numbers:
@@ -74,6 +78,8 @@ Notes on reading the numbers:
   therefore include extra time and should not be compared across cards.
 - Power, temperature and utilization statistics come from samples taken every 10
   seconds during the timed window only.
+- The charts plot those same samples, so their token-rate averages cover the timed
+  window only and differ slightly from the whole-run averages in the tables.
 
 ## Running it
 
@@ -111,6 +117,17 @@ Output files, written to the current directory:
 - `stress_<timestamp>.json`: configuration, per-GPU summary and the sampled time series.
 - `stress_<timestamp>_gpu<N>.log`: vLLM output for each worker. Look here first if a
   card fails.
+
+### Charts
+
+`plot-results.py` turns a results file into a PNG of power draw and token output over
+time, written next to the JSON. It needs matplotlib, which the stress test itself does
+not:
+
+```bash
+pip install matplotlib
+./plot-results.py results/full-power_10min_20261004.json
+```
 
 ### Slot names
 
